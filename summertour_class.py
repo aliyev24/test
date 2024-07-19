@@ -59,9 +59,7 @@ def params_generator(
 
 class SummerTour(BaseRequest):
     def __init__(self, url: str, params={}, proxy=None):
-        super().__init__(
-            additional_headers={"host": "www.summertour.az"},
-        )
+        super().__init__()
         if proxy:
             self.set_proxies(proxy)
 
