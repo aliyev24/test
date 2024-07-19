@@ -31,15 +31,15 @@ class BaseRequest:
 
         self.request = requests.Session()
 
-        if headers:
-            self.request.headers = headers
+        # if headers:
+        #     self.request.headers = headers
 
-        elif additional_headers:
-            self.headers.update(additional_headers)
-            self.request.headers = self.headers
+        # elif additional_headers:
+        #     self.headers.update(additional_headers)
+        #     self.request.headers = self.headers
 
-        else:
-            self.request.headers = self.headers
+        # else:
+        self.request.headers = self.headers
 
         if proxy_off is False:
             self.set_proxies(proxy=proxy)
